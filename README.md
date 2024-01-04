@@ -1,31 +1,21 @@
-### basics configuration project
-
-yarn init -y
-
-yarn add typescript prisma ts-node-dev @types/express @types/jsonwebtoken @types/bcrypt -D
-
-yarn add express bcrypt jsonwebtoken @prisma/client
-
-### initialization typescript
-
-yarn tsc --init
-
-### initialization prisma
-
-yarn prisma init
-
-npx prisma init
-
-### make migration
-
-yarn prisma migrate dev
-
-#### prisma format
-
-yarn prisma format
-
-### Install express async errors
-
-yarn add express-async-errors
-
 <h1>API de controle financeiro familiar</h1>
+
+<h3>Tecnologias usadas</h3>
+<ul>
+<li>Nodejs</li>
+<li>Prims ORM</li>
+<li>Postgres</li>
+<li>Typescript</li>
+</ul>
+
+<h3>Funcionalidade</h3>
+<ul>
+  <li>Dados de entrada (income)</li>
+  <li>Dados de saída (outcome)</li>
+  <li>Listar o total de income/outcome</li>
+  <li>Listar income/outcome específico</li>
+  <li>Fazer updated income/outcome</li>
+  <li>Deletar outcome/income</li>
+</ul>
+
+<p>Com isso, a família seberá dos gastos reais e poderá melhorar a economia familiar.</p>
