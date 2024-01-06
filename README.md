@@ -68,6 +68,8 @@ npx prisma migrate dev
       
     - *date: string*. A data do pagamento
       
+  - ***Criando um income***
+    
   
   ```js
   /*
@@ -120,6 +122,8 @@ npx prisma migrate dev
       
     - *date: string.* A data do pagamento
       
+  - ***Criando um outcome***
+    
 
 ```js
 /*
@@ -166,6 +170,8 @@ export class CreateSpendsUseCase {
   
   - Esta rota realiza uma atualização do dado de entrada (income) pelo id
     
+- ***Criando um update no income.***
+  
 
 ```js
 
@@ -195,6 +201,8 @@ export class UpdateIncomeUseCase {
   
   - Esta rota realiza uma atualização do dado de saída (outcome) pelo id
     
+- ***Criando um update no outcome.***
+  
 
 ```js
 // Realizada um update no outcome, caso exista no banco de dados.
@@ -223,6 +231,8 @@ export class UpdateSpendUseCase {
   
   - Esta roda deleta um dado de entrada (income) pelo id
     
+- ***Deletando um income, caso exista.***
+  
 
 ```js
 // realizado o delete do income, caso exista no banco de dados.
@@ -244,6 +254,8 @@ export class DeleteIncomeUseCase {
   
   - Esta rota deleta um dado de saĩda (outcome) pelo id
     
+- ***Deletando um outcome, caso exista.***
+  
 
 ```js
 // realizado o delete do outcome, caso exista no banco de dados
