@@ -41,18 +41,101 @@ npx prisma migrate dev
   
   - Esta rota lista todos os dados de entrada (income).
     
+  - ***Listando todos os incomes.***
+    
+
+```js
+// Lista todos os incomes. Buscando por todos os id.
+export class ListAllIncomeUseCase {
+  async execute({ id_income }: IListAllIncomes) {
+    const incomes = await prisma.income.findMany({
+      where: {
+        id: id_income,
+      },
+      select: {
+        id: true,
+        description: true,
+        payment: true,
+        date: true,
+      },
+    });
+
+    return incomes;
+  }
+}
+```
+
 - routes.get("/income/:id", listAllIncomeController.handle);
   
   - Esta rota lista um dado de entrada (income) buscando pelo id.
     
+- ***Lista o income espeícfico pelo id.***
+  
+
+```js
+// Lista todos os incomes. Buscando por todos os id.
+export class ListAllIncomeUseCase {
+  async execute({ id_income }: IListAllIncomes) {
+    const incomes = await prisma.income.findMany({
+      where: {
+        id: id_income,
+      },
+      select: {
+        id: true,
+        description: true,
+        payment: true,
+        date: true,
+      },
+    });
+
+    return incomes;
+  }
+}
+```
+
 - routes.get("/spend", listAllSpendController.handle);
   
   - Esta rota lista todos os dados de saída (outcome).
     
+- ***Lista todos os outcome que existem no banco de dados.***
+  
+
+```js
+
+export class ListAllSpendsUseCase {
+  async execute({ id_spend }: IListSpends) {
+    const listAllSpends = await prisma.spends.findMany({
+      where: {
+        id: id_spend,
+      },
+    });
+
+    return listAllSpends;
+  }
+}
+```
+
 - routes.get("/spend/:id", listAllSpendController.handle);
   
   - Esta rota lista um dado de saída (outcome) buscando pelo id.
     
+- Lista um outcome específico, bucando pelo id.
+  
+
+```js
+
+export class ListAllSpendsUseCase {
+  async execute({ id_spend }: IListSpends) {
+    const listAllSpends = await prisma.spends.findMany({
+      where: {
+        id: id_spend,
+      },
+    });
+
+    return listAllSpends;
+  }
+}
+```
 
 **POST**
 
